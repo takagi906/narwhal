@@ -96,24 +96,28 @@ scrape_configs:
 EOF
 
 t=$(($num_primary - 1))
-for i in $(seq -f %02g 0 ${t})
+for i in $(seq 0 ${t})
 do
     val=${target}/validator-${i}
-    mkdir -p ${val}/{db-primary,db-worker-0,logs}
-    ${node} generate_keys --filename ${val}/key.json
+    mkdir -p ${val}/db-primary
+    mkdir -p ${val}/db-worker-0
+    mkdir -p ${val}/logs
+    ${node} generate_keys --filename ${val}/primary-key.json
     ${node} generate_network_keys --filename ${val}/network-key.json
+    ${node} generate_keys --filename ${val}/worker-key.json
 done
 
 cp validators/parameters.json ${target}/parameters.json
 
 ./scripts/gen.committee.py -n ${num_primary} -d ${target} > ${target}/committee.json
-./scripts/gen.workers.py -np ${num_primary} -nw ${num_worker} -d ${target} > ${target}/workers.json
+./scripts/gen.workers.py -np ${num_primary} -nw ${num_worker} -d ${target} | tee ${target}/workers.json
 
-cp -r templates/{grafana,prometheus} ${target}/
+cp -r templates/grafana ${target}/
+cp -r templates/prometheus ${target}/
 
 # add the primary and worker nodes to the prometheus.yaml scrape configs.
 t=$(($num_primary - 1))
-for i in $(seq -f %02g 0 ${t})
+for i in $(seq 0 ${t})
 do
     scrape_primary="primary_${i}:8010"
     scrape_worker="worker_${i}:8010"

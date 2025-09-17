@@ -10,8 +10,7 @@ services:
     environment:
       - NODE_TYPE=primary
       - VALIDATOR_ID=0
-      - LOG_LEVEL=-vvv
-      - CONSENSUS_DISABLED=--consensus-disabled
+      - LOG_LEVEL=-vv
     expose:
       - "3000" # Port to listen on messages from other primary nodes
       - "3001" # Port to listen on messages from our worker nodes
@@ -31,7 +30,7 @@ services:
     environment:
       - NODE_TYPE=worker
       - VALIDATOR_ID=0
-      - LOG_LEVEL=-vvv
+      - LOG_LEVEL=-vv
       - WORKER_ID=0
     expose:
       - "4000" # Port to listen on messages from our primary node
@@ -51,8 +50,7 @@ services:
     environment:
       - NODE_TYPE=primary
       - VALIDATOR_ID=1
-      - LOG_LEVEL=-vvv
-      - CONSENSUS_DISABLED=--consensus-disabled
+      - LOG_LEVEL=-vv
     expose:
       - "3000" # Port to listen on messages from other primary nodes
       - "3001" # Port to listen on messages from our worker nodes
@@ -72,7 +70,7 @@ services:
     environment:
       - NODE_TYPE=worker
       - VALIDATOR_ID=1
-      - LOG_LEVEL=-vvv
+      - LOG_LEVEL=-vv
       - WORKER_ID=0
     expose:
       - "4000" # Port to listen on messages from our primary node
@@ -92,8 +90,7 @@ services:
     environment:
       - NODE_TYPE=primary
       - VALIDATOR_ID=2
-      - LOG_LEVEL=-vvv
-      - CONSENSUS_DISABLED=--consensus-disabled
+      - LOG_LEVEL=-vv
     expose:
       - "3000" # Port to listen on messages from other primary nodes
       - "3001" # Port to listen on messages from our worker nodes
@@ -113,7 +110,7 @@ services:
     environment:
       - NODE_TYPE=worker
       - VALIDATOR_ID=2
-      - LOG_LEVEL=-vvv
+      - LOG_LEVEL=-vv
       - WORKER_ID=0
     expose:
       - "4000" # Port to listen on messages from our primary node
@@ -133,8 +130,7 @@ services:
     environment:
       - NODE_TYPE=primary
       - VALIDATOR_ID=3
-      - LOG_LEVEL=-vvv
-      - CONSENSUS_DISABLED=--consensus-disabled
+      - LOG_LEVEL=-vv
     expose:
       - "3000" # Port to listen on messages from other primary nodes
       - "3001" # Port to listen on messages from worker nodes
@@ -154,7 +150,7 @@ services:
     environment:
       - NODE_TYPE=worker
       - VALIDATOR_ID=3
-      - LOG_LEVEL=-vvv
+      - LOG_LEVEL=-vv
       - WORKER_ID=0
     expose:
       - "4000" # Port to listen on messages from our primary node

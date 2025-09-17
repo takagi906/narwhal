@@ -22,12 +22,12 @@ def main():
     # load keys
     keys = []
     for i in range(args.n):
-        k = open("{}/validator-{:02d}/key.json".format(args.d, i)).read()
+        k = open("{}/validator-{:01d}/primary-key.json".format(args.d, i)).read()
         keys.append(json.loads(k))
 
     network_keys = []
     for i in range(args.n):
-        k = open("{}/validator-{:02d}/network-key.json".format(args.d, i)).read()
+        k = open("{}/validator-{:01d}/network-key.json".format(args.d, i)).read()
         network_keys.append(json.loads(k))
 
 

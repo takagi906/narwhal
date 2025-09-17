@@ -24,9 +24,12 @@ def main():
     # load keys
     keys = []
     for i in range(args.np):
-        k = open("{}/validator-{:02d}/key.json".format(args.d, i)).read()
+        k = open("{}/validator-{:01d}/primary-key.json".format(args.d, i)).read()
         keys.append(json.loads(k))
-
+    woker_name = []
+    for i in range(args.np):
+        k = open("{}/validator-{:01d}/worker-key.json".format(args.d, i)).read()
+        woker_name.append(json.loads(k).get('name'))
     temp = {}
     starting_port = 4000
     for i, k in enumerate(keys):
@@ -34,6 +37,7 @@ def main():
         port = starting_port
         for j in range(args.nw):
             workers[j] = {
+                "name": woker_name[i],
                 "transactions": "/dns/worker_{:02d}/tcp/{}/http".format(i, port+1),
                 "worker_address": "/dns/worker_{:02d}/tcp/{}/http".format(i, port+2)
             }

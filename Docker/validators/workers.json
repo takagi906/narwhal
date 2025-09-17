@@ -1,31 +1,31 @@
 {
     "workers": {
-        "i9TwX9Z/CiFznIoO14nIUdJ9Wpo0o50o7tSGtmdhuB5hTK1h5WNvsmUOhc3pdgFaFfKhe1O1NNlTb+sraT0I+ZtOsJUrO5e5figU7XPj5tzRkTlJUoBPtjb1f3RbbXHj": {
+        "UyLk7KqujyTn2hFw9ZveLl4D4vhOYT+81OmcsF4S1TQ=": {
             "0": {
+                "name": "vZEM7KRciRS4VEksKb7VipHgvoBbvSlVoOeR70YH8fc=",
                 "transactions": "/dns/worker_0/tcp/4001/http",
-                "worker_address": "/dns/worker_0/tcp/4002/http",
-                "name": "i9TwX9Z/CiFznIoO14nIUdJ9Wpo0o50o7tSGtmdhuB5hTK1h5WNvsmUOhc3pdgFaFfKhe1O1NNlTb+sraT0I+ZtOsJUrO5e5figU7XPj5tzRkTlJUoBPtjb1f3RbbXHj"
+                "worker_address": "/dns/worker_0/tcp/4002/http"
             }
         },
-        "lEExVRsXRE2O5+Yhaunn0+yckZz249/OERxaTrCQZUIz7E4gmyGQWmKFEpBA2p8VCcAHvveCvupstx7Qp8/w1gpqo2kFRXqagO/IRDOfJiItmtVxzHWxlnSP/2XKSkZf": {
+        "BrQ7JrRLXwaDNxpabA4gT0XP/aCCEXSqEmA7OVlb5qw=": {
             "0": {
+                "name": "jK3SHI6e/jx44Jh+PwSaFZNg5RM/Hss5hXlXhZlGrYA=",
                 "transactions": "/dns/worker_1/tcp/4001/http",
-                "worker_address": "/dns/worker_1/tcp/4002/http",
-                "name": "lEExVRsXRE2O5+Yhaunn0+yckZz249/OERxaTrCQZUIz7E4gmyGQWmKFEpBA2p8VCcAHvveCvupstx7Qp8/w1gpqo2kFRXqagO/IRDOfJiItmtVxzHWxlnSP/2XKSkZf"
+                "worker_address": "/dns/worker_1/tcp/4002/http"
             }
         },
-        "pF/T4zMSkvDcHkCuk4Q8jsjcS+vZb/yAj2d8/R7CLH10dP3UxQKjwIeTklXJk/nLDfUg3MN86jMPSO/+2JTqO46oE86XssCKK+SeQCjft+gL0EzdvNlBs5iEt1YGlsoK": {
+        "DWkqIXWtrq6hFrKuxABra8FOmcbPpMOxlctgnN80Lmo=": {
             "0": {
+                "name": "D5UJBjHEXQ6bRd3cE0grHYy1QaXSpiGQbL3ROC1h25w=",
                 "transactions": "/dns/worker_2/tcp/4001/http",
-                "worker_address": "/dns/worker_2/tcp/4002/http",
-                "name": "pF/T4zMSkvDcHkCuk4Q8jsjcS+vZb/yAj2d8/R7CLH10dP3UxQKjwIeTklXJk/nLDfUg3MN86jMPSO/+2JTqO46oE86XssCKK+SeQCjft+gL0EzdvNlBs5iEt1YGlsoK"
+                "worker_address": "/dns/worker_2/tcp/4002/http"
             }
         },
-        "ofwVakr2b+MoerCcQp+skTHfVVPOit575513sx443Cw7ESN6QxPcC6aWnhMUd/EwAI2mVImC4pKaE9G88vzA7B40X7SegLe1lFIJWE8Jyvds1yxWcnmESFF+L8ZLGI9i": {
+        "naAgODAjuLSCiMhzuzq9ZUliIUeX8Mz+cSjBe9blb68=": {
             "0": {
+                "name": "cKA+snzvS9xKII/fbOHyiBRafnUxraGCM4qT2P583hI=",
                 "transactions": "/dns/worker_3/tcp/4001/http",
-                "worker_address": "/dns/worker_3/tcp/4002/http",
-                "name": "ofwVakr2b+MoerCcQp+skTHfVVPOit575513sx443Cw7ESN6QxPcC6aWnhMUd/EwAI2mVImC4pKaE9G88vzA7B40X7SegLe1lFIJWE8Jyvds1yxWcnmESFF+L8ZLGI9i"
+                "worker_address": "/dns/worker_3/tcp/4002/http"
             }
         }
     },

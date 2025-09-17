@@ -15,9 +15,9 @@ fi
 
 # Environment variables to use on the script
 NODE_BIN="./bin/node"
-PRIMARY_KEYS_PATH=${KEYS_PATH:="/validators/validator-$VALIDATOR_ID/primary-key.json"}
-PRIMARY_NETWORK_KEYS_PATH=${KEYS_PATH:="/validators/validator-$VALIDATOR_ID/network-key.json"}
-WORKER_KEYS_PATH=${KEYS_PATH:="/validators/validator-$VALIDATOR_ID/worker-key.json"}
+PRIMARY_KEYS_PATH=${PRIMARY_KEYS_PATH:="/validators/validator-$VALIDATOR_ID/primary-key.json"}
+PRIMARY_NETWORK_KEYS_PATH=${PRIMARY_NETWORK_KEYS_PATH:="/validators/validator-$VALIDATOR_ID/network-key.json"}
+WORKER_KEYS_PATH=${WORKER_KEYS_PATH:="/validators/validator-$VALIDATOR_ID/worker-key.json"}
 COMMITTEE_PATH=${COMMITTEE_PATH:="/validators/committee.json"}
 WORKERS_PATH=${WORKERS_PATH:="/validators/workers.json"}
 PARAMETERS_PATH=${PARAMETERS_PATH:="/validators/parameters.json"}
