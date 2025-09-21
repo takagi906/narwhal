@@ -111,7 +111,6 @@ async fn main() -> Result<(), eyre::Report> {
             let primary_keypair = KeyPair::import(primary_key_file)
                 .context("Failed to load the node's primary keypair")?;
             let primary_network_key_file = sub_matches.value_of("primary-network-keys").unwrap();
-            println!("{}", primary_network_key_file);
             let primary_network_keypair = NetworkKeyPair::import(primary_network_key_file)
                 .context("Failed to load the node's primary network keypair")?;
             let worker_key_file = sub_matches.value_of("worker-keys").unwrap();

@@ -50,6 +50,19 @@ class LocalBench:
             cmd = f'{CommandMaker.clean_logs()} ; {CommandMaker.cleanup()}'
             subprocess.run([cmd], shell=True, stderr=subprocess.DEVNULL)
             sleep(0.5)  # Removing the store may take time.
+            # 远程模式
+            # src_dir = "./logs_bak"
+            # dst_dir = "./logs"
+
+            # # 确保目标目录存在
+            # os.makedirs(dst_dir, exist_ok=True)
+
+            # for filename in os.listdir(src_dir):
+            #     src_file = os.path.join(src_dir, filename)
+            #     dst_file = os.path.join(dst_dir, filename)
+    
+            #     if os.path.isfile(src_file):  
+            #         shutil.copy2(src_file, dst_file)  
 
             # Recompile the latest code.
             cmd = CommandMaker.compile(mem_profiling=self.mem_profile)

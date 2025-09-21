@@ -161,3 +161,8 @@ services:
     volumes:
       - ./validators:/validators
       - ./validators/validator-3/logs:/home/logs
+  benchmark_client:
+    image: narwhal-benchmark:latest
+    volumes:
+      - ./logs:/narwhal/logs
+    command: [ "sh", "-c", "sleep 5 && python3 docker_benchmark.py" ]

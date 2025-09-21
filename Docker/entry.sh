@@ -47,7 +47,7 @@ if [[ "$NODE_TYPE" = "primary" ]]; then
   --workers $WORKERS_PATH \
   --store "${DATA_PATH}/validator-$VALIDATOR_ID/db-primary" \
   --parameters $PARAMETERS_PATH \
-  primary $CONSENSUS_DISABLED
+  primary $CONSENSUS_DISABLED > "/home/logs/primary-$VALIDATOR_ID.log" 2>&1
 elif [[ "$NODE_TYPE" = "worker" ]]; then
   echo "Bootstrapping new worker node with id $WORKER_ID"
 
@@ -59,7 +59,7 @@ elif [[ "$NODE_TYPE" = "worker" ]]; then
   --workers $WORKERS_PATH \
   --store "${DATA_PATH}/validator-$VALIDATOR_ID/db-worker-$WORKER_ID" \
   --parameters $PARAMETERS_PATH \
-  worker --id $WORKER_ID
+  worker --id $WORKER_ID > "/home/logs/worker-$VALIDATOR_ID-0.log" 2>&1
 else
   echo "Unknown provided value for parameter: NODE_TYPE=$NODE_TYPE"
   exit 1
